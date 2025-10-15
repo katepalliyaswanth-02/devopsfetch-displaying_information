@@ -35,7 +35,6 @@ Extensible utility functions
 
 File structure
 
-
 File/Folder	Description
 modules/:	Main source folder containing all logic modules
 devopsfetch.py:	Entry-point script; runs main collection routine
@@ -66,27 +65,22 @@ __init__.py : Package marker for imports.
 
 Installation
 Run the included shell script to set up dependencies:
-
 bash
 sh install.sh
 
 manually install Python requirements:
-
 bash
 pip install -r requirements.txt
 
 Usage
 To run Devopsfetch directly:
-
 bash
 python devopsfetch.py
 
 For system service deployment:
 
 Edit and copy devopsfetch.service to /etc/systemd/system/
-
 Use systemctl to start:
-
 bash
 sudo systemctl enable devopsfetch
 sudo systemctl start devopsfetch
