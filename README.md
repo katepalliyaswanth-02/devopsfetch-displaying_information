@@ -63,30 +63,35 @@ utils.py : Utility functions shared by multiple modules.
 __init__.py : Package marker for imports.
 
 
-Installation
+3.Installation
 Run the included shell script to set up dependencies:
 bash
 sh install.sh
 
-manually install Python requirements:
+4.manually install Python requirements:
 bash
 pip install -r requirements.txt
 
-Usage
+5.Usage
 To run Devopsfetch directly:
 bash
 python devopsfetch.py
 
-For system service deployment:
+6.Copy the provided systemd service file:
+bash
+sudo cp devopsfetch.service /etc/systemd/system/
 
-Edit and copy devopsfetch.service to /etc/systemd/system/
-Use systemctl to start:
+7.Enable and start the service
 bash
 sudo systemctl enable devopsfetch
 sudo systemctl start devopsfetch
 
+8.check the service status
+bash
+sudo systemctl status devopsfetch
 
-Quick to run commands
+
+9.Quick to run commands
 Ports   python devopsfetch.py --port
 
 Docker  python devopsfetch.py --docker
@@ -103,7 +108,10 @@ Monitor python devopsfetch.py --monitor
 CONCLUSION
 DevOpsfetch is organized for modularity, maintainability, and extensible automation. A well-documented
 structure combined with organized code modules and clear deployment scripts makes it easy to integrate
-with your DevOps pipeline or infrastructure monitoring stack.
+with your DevOps pipeline or infrastructure monitoring stack.It simplifies system Diagnostics and Devops Monitoring 
+by providing clean, scriptable access to critical infrastructure data all in place.
+
+
 
 
 
